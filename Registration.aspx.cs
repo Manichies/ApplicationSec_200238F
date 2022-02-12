@@ -69,8 +69,6 @@ namespace ApplicationSec_200238F
         }
         protected void validateregister()
         {
-            System.Diagnostics.Debug.WriteLine("vali");
-
             string TBfname = firstname.Text.ToString().Trim();
             string TBlname = lastname.Text.ToString().Trim();
             string TBemail = email.Text.ToString().Trim();
@@ -79,13 +77,6 @@ namespace ApplicationSec_200238F
             string TBcreditcard = creditcard.Text.ToString().Trim();
 
             int zeroError = 0;
-
-
-            //if (fname.Length == 0 || lname.Length == 0 || email.Length == 0 || password.Length == 0 || date.Length == 0 || ccno.Length == 0)
-            //{
-            //    allinputVD.Text = "*Plese fill in all fields";
-            //    allinputVD.Visible = true;
-            //}
 
             if (Regex.IsMatch(firstname.Text, "^[a - zA - Z]$"))
             {
@@ -108,13 +99,8 @@ namespace ApplicationSec_200238F
                 lbl_lname.Visible = true;
             }
 
-            //if ()
-            //{
-            //    emailVD.Text = "*Email already registered";
-            //    emailVD.Visible = true;
-            //}
-            string emailregex = @"\A(?:[a-z0-9!#$%&'+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'+/=?^_`{|}~-]+)@(?:[a-z0-9](?:[a-z0-9-][a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z";
-            if (Regex.IsMatch(email.Text, emailregex)) //email???
+            string eRegex = @"\A(?:[a-z0-9!#$%&'+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'+/=?^_`{|}~-]+)@(?:[a-z0-9](?:[a-z0-9-][a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z";
+            if (Regex.IsMatch(email.Text, eRegex))
             {
                 lbl_email.Visible = false;
                 zeroError += 1;
@@ -149,8 +135,6 @@ namespace ApplicationSec_200238F
             {
                 return;
             }
-
-            //call the btnsubmit thing once everything is ok
 
 
         }

@@ -21,8 +21,7 @@
              document.getElementById("lbl_pwdchecker").style.color = "Red";
              return ("too_short");
          }
-         else if (str.search(/[0-9]/) == -1) {
-             document.getElementById("lbl_pwdchecker").innerHTML = "Password require at least 1 number";
+         else if (str.search(/[0-9]/) == -1) {             document.getElementById("lbl_pwdchecker").innerHTML = "Password require at least 1 number";
              document.getElementById("lbl_pwdchecker").style.color = "Red";
              return ("no_number")
          }

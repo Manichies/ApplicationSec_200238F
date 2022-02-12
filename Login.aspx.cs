@@ -86,7 +86,7 @@ namespace ApplicationSec_200238F
                             error.Text = "Error Account has been locked out";
                             error.ForeColor = Color.Red;
                             DateTime failDate = DateTime.Now;
-                            failCounter = 3;
+                            failCounter = 10;
                             UpdateFailDateCount(email, failCounter, failDate);
                             
 
